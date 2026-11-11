@@ -1,0 +1,11 @@
+{
+  "files": [
+    {
+      "bytes": 503,
+      "name": "release-1.4.2.tar.gz",
+      "sha256": "ac4c6d211d5b59513a3f83114f01ec35ade674e5f596e7a612a5516845c3eb2d"
+    }
+  ],
+  "name": "example-release",
+  "version": "1.4.2"
+}

@@ -1,0 +1,13 @@
+environment:
+2026-11-11T02:23:37Z
+Linux htch-runtime 7.0.0-44-generic #1 SMP PREEMPT_DYNAMIC Fri Nov  6 01:23:31 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+cpu: 4 vCPU
+model name	: AMD EPYC 9D25 126-Core Processor
+MemTotal:        8124896 kB
+python: 3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]
+gcc: gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+cmake: cmake version 3.28.3
+liboqs: 0.16.0 (tarball SHA256 162d5b510518ee5f285f82fa1f16402a885176e818bf1b1a4c3c91c9a2f01eae)
+build: Release, -DOQS_DIST_BUILD=OFF -DOQS_OPT_TARGET=auto -DOQS_BUILD_ONLY_LIB=ON (single optimized build)
+dependencies: liboqs 0.16.0 + OpenSSL libcrypto (link only); Python 3 standard library only; no third-party Python packages, no network access during build/run
+artifact: fixtures/release-1.4.2.tar.gz (503 bytes, sha256 ac4c6d211d5b59513a3f83114f01ec35ade674e5f596e7a612a5516845c3eb2d)
