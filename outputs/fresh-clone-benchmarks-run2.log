@@ -1,0 +1,26 @@
+benchmarks: tag=run2 artifact=/tmp/ml-dsa-slh-repro/pack/fixtures/release-1.4.2.tar.gz sha256=ac4c6d211d5b59513a3f83114f01ec35ade674e5f596e7a612a5516845c3eb2d
+benchmarks: utc_start=2026-11-11T02:40:23Z
+benchmarks: csv header: alg,n,artifact_bytes,pk_len,sk_len,sig_len,keygen_median_us,sign_median_us,verify_median_us,verify_ok
+bench: alg=ML-DSA-44 n=100 artifact_bytes=503 pk_len=1312 sk_len=2560 sig_len=2420 keygen_median_us=33.0 sign_median_us=77.9 verify_median_us=37.8 verify_ok=100/100
+csv: ML-DSA-44,100,503,1312,2560,2420,33.0,77.9,37.8,100
+bench: alg=ML-DSA-65 n=100 artifact_bytes=503 pk_len=1952 sk_len=4032 sig_len=3309 keygen_median_us=57.3 sign_median_us=131.6 verify_median_us=60.2 verify_ok=100/100
+csv: ML-DSA-65,100,503,1952,4032,3309,57.3,131.6,60.2,100
+bench: alg=ML-DSA-87 n=100 artifact_bytes=503 pk_len=2592 sk_len=4896 sig_len=4627 keygen_median_us=82.3 sign_median_us=147.1 verify_median_us=85.7 verify_ok=100/100
+csv: ML-DSA-87,100,503,2592,4896,4627,82.3,147.1,85.7,100
+bench: alg=SLH_DSA_PURE_SHA2_128S n=20 artifact_bytes=503 pk_len=32 sk_len=64 sig_len=7856 keygen_median_us=94887.4 sign_median_us=721057.9 verify_median_us=728.3 verify_ok=20/20
+csv: SLH_DSA_PURE_SHA2_128S,20,503,32,64,7856,94887.4,721057.9,728.3,20
+bench: alg=SLH_DSA_PURE_SHA2_128F n=20 artifact_bytes=503 pk_len=32 sk_len=64 sig_len=17088 keygen_median_us=1460.1 sign_median_us=34107.2 verify_median_us=2046.6 verify_ok=20/20
+csv: SLH_DSA_PURE_SHA2_128F,20,503,32,64,17088,1460.1,34107.2,2046.6,20
+bench: alg=SLH_DSA_PURE_SHA2_192S n=20 artifact_bytes=503 pk_len=48 sk_len=96 sig_len=16224 keygen_median_us=135137.2 sign_median_us=1259412.4 verify_median_us=1035.0 verify_ok=20/20
+csv: SLH_DSA_PURE_SHA2_192S,20,503,48,96,16224,135137.2,1259412.4,1035.0,20
+bench: alg=SLH_DSA_PURE_SHA2_256S n=20 artifact_bytes=503 pk_len=64 sk_len=128 sig_len=29792 keygen_median_us=90533.6 sign_median_us=1126440.2 verify_median_us=1467.4 verify_ok=20/20
+csv: SLH_DSA_PURE_SHA2_256S,20,503,64,128,29792,90533.6,1126440.2,1467.4,20
+--- artifact-size scaling (sign only) ---
+scalesign: alg=ML-DSA-65 artifact_bytes=503 n=20 sign_median_us=146.2 sig_len=3309
+scalesign: alg=ML-DSA-65 artifact_bytes=1048576 n=5 sign_median_us=5563.3 sig_len=3309
+scalesign: alg=ML-DSA-65 artifact_bytes=10485760 n=5 sign_median_us=53141.5 sig_len=3309
+scalesign: alg=SLH_DSA_PURE_SHA2_128S artifact_bytes=503 n=20 sign_median_us=714631.7 sig_len=7856
+scalesign: alg=SLH_DSA_PURE_SHA2_128S artifact_bytes=1048576 n=5 sign_median_us=728600.7 sig_len=7856
+scalesign: alg=SLH_DSA_PURE_SHA2_128S artifact_bytes=10485760 n=5 sign_median_us=826186.7 sig_len=7856
+benchmarks: utc_end=2026-11-11T02:41:55Z
+RESULT: PASS benchmarks tag=run2

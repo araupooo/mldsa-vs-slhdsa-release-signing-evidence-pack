@@ -1,0 +1,8 @@
+{
+  "alg": "ML-DSA-65",
+  "artifact": "release-1.4.2.tar.gz",
+  "keys": [
+    {"key_id": "release-2026-11-mldsa65-v1", "status": "retired", "pk_prefix_hex": "9df4ddcf6f343010d82169e5d1aec485", "signed": ["release-1.4.2"]},
+    {"key_id": "release-2026-11-mldsa65-v2", "status": "active", "pk_prefix_hex": "438b541caf3223b7bec59216d3695110", "signed": ["release-1.4.3"]}
+  ]
+}

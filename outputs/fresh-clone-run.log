@@ -1,0 +1,205 @@
+clean_reproduce: workdir=/tmp/ml-dsa-slh-repro
+#define OQS_VERSION_TEXT "0.16.0"
+built: /tmp/ml-dsa-slh-repro/pack/work/bin/release_sign
+-rwxrwx--- 1 root root 6556056 Nov 11 02:38 /tmp/ml-dsa-slh-repro/pack/work/bin/release_sign
+sign-tests: artifact=/tmp/ml-dsa-slh-repro/pack/fixtures/release-1.4.2.tar.gz sha256=ac4c6d211d5b59513a3f83114f01ec35ade674e5f596e7a612a5516845c3eb2d
+sign-tests: utc_start=2026-11-11T02:38:42Z
+sign-tests: artifact=/tmp/ml-dsa-slh-repro/pack/fixtures/release-1.4.2.tar.gz sha256=ac4c6d211d5b59513a3f83114f01ec35ade674e5f596e7a612a5516845c3eb2d
+sign-tests: utc_start=2026-11-11T02:38:42Z
+--- ML-DSA-44 ---
+sizes: alg=ML-DSA-44 pk_len=1312 sk_len=2560 sig_len=2420 nist_level=2
+test: alg=ML-DSA-44 check=keygen PASS
+test: alg=ML-DSA-44 check=sign PASS
+test: alg=ML-DSA-44 check=verify_roundtrip PASS
+test: alg=ML-DSA-44 check=tampered_artifact_rejected PASS
+test: alg=ML-DSA-44 check=tampered_signature_rejected PASS
+test: alg=ML-DSA-44 check=wrong_key_rejected PASS
+test: alg=ML-DSA-44 check=empty_message_roundtrip PASS
+test: alg=ML-DSA-44 check=sizes_match PASS
+test_summary: alg=ML-DSA-44 checks=8 pass=8 fail=0
+RESULT: PASS sigtest ML-DSA-44 checks=8
+--- ML-DSA-65 ---
+sizes: alg=ML-DSA-65 pk_len=1952 sk_len=4032 sig_len=3309 nist_level=3
+test: alg=ML-DSA-65 check=keygen PASS
+test: alg=ML-DSA-65 check=sign PASS
+test: alg=ML-DSA-65 check=verify_roundtrip PASS
+test: alg=ML-DSA-65 check=tampered_artifact_rejected PASS
+test: alg=ML-DSA-65 check=tampered_signature_rejected PASS
+test: alg=ML-DSA-65 check=wrong_key_rejected PASS
+test: alg=ML-DSA-65 check=empty_message_roundtrip PASS
+test: alg=ML-DSA-65 check=sizes_match PASS
+test_summary: alg=ML-DSA-65 checks=8 pass=8 fail=0
+RESULT: PASS sigtest ML-DSA-65 checks=8
+--- ML-DSA-87 ---
+sizes: alg=ML-DSA-87 pk_len=2592 sk_len=4896 sig_len=4627 nist_level=5
+test: alg=ML-DSA-87 check=keygen PASS
+test: alg=ML-DSA-87 check=sign PASS
+test: alg=ML-DSA-87 check=verify_roundtrip PASS
+test: alg=ML-DSA-87 check=tampered_artifact_rejected PASS
+test: alg=ML-DSA-87 check=tampered_signature_rejected PASS
+test: alg=ML-DSA-87 check=wrong_key_rejected PASS
+test: alg=ML-DSA-87 check=empty_message_roundtrip PASS
+test: alg=ML-DSA-87 check=sizes_match PASS
+test_summary: alg=ML-DSA-87 checks=8 pass=8 fail=0
+RESULT: PASS sigtest ML-DSA-87 checks=8
+--- SLH_DSA_PURE_SHA2_128S ---
+sizes: alg=SLH_DSA_PURE_SHA2_128S pk_len=32 sk_len=64 sig_len=7856 nist_level=1
+test: alg=SLH_DSA_PURE_SHA2_128S check=keygen PASS
+test: alg=SLH_DSA_PURE_SHA2_128S check=sign PASS
+test: alg=SLH_DSA_PURE_SHA2_128S check=verify_roundtrip PASS
+test: alg=SLH_DSA_PURE_SHA2_128S check=tampered_artifact_rejected PASS
+test: alg=SLH_DSA_PURE_SHA2_128S check=tampered_signature_rejected PASS
+test: alg=SLH_DSA_PURE_SHA2_128S check=wrong_key_rejected PASS
+test: alg=SLH_DSA_PURE_SHA2_128S check=empty_message_roundtrip PASS
+test: alg=SLH_DSA_PURE_SHA2_128S check=sizes_match PASS
+test_summary: alg=SLH_DSA_PURE_SHA2_128S checks=8 pass=8 fail=0
+RESULT: PASS sigtest SLH_DSA_PURE_SHA2_128S checks=8
+--- SLH_DSA_PURE_SHA2_128F ---
+sizes: alg=SLH_DSA_PURE_SHA2_128F pk_len=32 sk_len=64 sig_len=17088 nist_level=1
+test: alg=SLH_DSA_PURE_SHA2_128F check=keygen PASS
+test: alg=SLH_DSA_PURE_SHA2_128F check=sign PASS
+test: alg=SLH_DSA_PURE_SHA2_128F check=verify_roundtrip PASS
+test: alg=SLH_DSA_PURE_SHA2_128F check=tampered_artifact_rejected PASS
+test: alg=SLH_DSA_PURE_SHA2_128F check=tampered_signature_rejected PASS
+test: alg=SLH_DSA_PURE_SHA2_128F check=wrong_key_rejected PASS
+test: alg=SLH_DSA_PURE_SHA2_128F check=empty_message_roundtrip PASS
+test: alg=SLH_DSA_PURE_SHA2_128F check=sizes_match PASS
+test_summary: alg=SLH_DSA_PURE_SHA2_128F checks=8 pass=8 fail=0
+RESULT: PASS sigtest SLH_DSA_PURE_SHA2_128F checks=8
+--- SLH_DSA_PURE_SHA2_192S ---
+sizes: alg=SLH_DSA_PURE_SHA2_192S pk_len=48 sk_len=96 sig_len=16224 nist_level=3
+test: alg=SLH_DSA_PURE_SHA2_192S check=keygen PASS
+test: alg=SLH_DSA_PURE_SHA2_192S check=sign PASS
+test: alg=SLH_DSA_PURE_SHA2_192S check=verify_roundtrip PASS
+test: alg=SLH_DSA_PURE_SHA2_192S check=tampered_artifact_rejected PASS
+test: alg=SLH_DSA_PURE_SHA2_192S check=tampered_signature_rejected PASS
+test: alg=SLH_DSA_PURE_SHA2_192S check=wrong_key_rejected PASS
+test: alg=SLH_DSA_PURE_SHA2_192S check=empty_message_roundtrip PASS
+test: alg=SLH_DSA_PURE_SHA2_192S check=sizes_match PASS
+test_summary: alg=SLH_DSA_PURE_SHA2_192S checks=8 pass=8 fail=0
+RESULT: PASS sigtest SLH_DSA_PURE_SHA2_192S checks=8
+--- SLH_DSA_PURE_SHA2_256S ---
+sizes: alg=SLH_DSA_PURE_SHA2_256S pk_len=64 sk_len=128 sig_len=29792 nist_level=5
+test: alg=SLH_DSA_PURE_SHA2_256S check=keygen PASS
+test: alg=SLH_DSA_PURE_SHA2_256S check=sign PASS
+test: alg=SLH_DSA_PURE_SHA2_256S check=verify_roundtrip PASS
+test: alg=SLH_DSA_PURE_SHA2_256S check=tampered_artifact_rejected PASS
+test: alg=SLH_DSA_PURE_SHA2_256S check=tampered_signature_rejected PASS
+test: alg=SLH_DSA_PURE_SHA2_256S check=wrong_key_rejected PASS
+test: alg=SLH_DSA_PURE_SHA2_256S check=empty_message_roundtrip PASS
+test: alg=SLH_DSA_PURE_SHA2_256S check=sizes_match PASS
+test_summary: alg=SLH_DSA_PURE_SHA2_256S checks=8 pass=8 fail=0
+RESULT: PASS sigtest SLH_DSA_PURE_SHA2_256S checks=8
+sign-tests: utc_end=2026-11-11T02:38:49Z
+RESULT: PASS sign-tests all_algorithms
+benchmarks: tag=run1 artifact=/tmp/ml-dsa-slh-repro/pack/fixtures/release-1.4.2.tar.gz sha256=ac4c6d211d5b59513a3f83114f01ec35ade674e5f596e7a612a5516845c3eb2d
+benchmarks: utc_start=2026-11-11T02:38:49Z
+benchmarks: csv header: alg,n,artifact_bytes,pk_len,sk_len,sig_len,keygen_median_us,sign_median_us,verify_median_us,verify_ok
+bench: alg=ML-DSA-44 n=100 artifact_bytes=503 pk_len=1312 sk_len=2560 sig_len=2420 keygen_median_us=33.1 sign_median_us=87.1 verify_median_us=38.0 verify_ok=100/100
+csv: ML-DSA-44,100,503,1312,2560,2420,33.1,87.1,38.0,100
+bench: alg=ML-DSA-65 n=100 artifact_bytes=503 pk_len=1952 sk_len=4032 sig_len=3309 keygen_median_us=57.8 sign_median_us=153.9 verify_median_us=63.1 verify_ok=100/100
+csv: ML-DSA-65,100,503,1952,4032,3309,57.8,153.9,63.1,100
+bench: alg=ML-DSA-87 n=100 artifact_bytes=503 pk_len=2592 sk_len=4896 sig_len=4627 keygen_median_us=82.5 sign_median_us=147.1 verify_median_us=85.2 verify_ok=100/100
+csv: ML-DSA-87,100,503,2592,4896,4627,82.5,147.1,85.2,100
+bench: alg=SLH_DSA_PURE_SHA2_128S n=20 artifact_bytes=503 pk_len=32 sk_len=64 sig_len=7856 keygen_median_us=94054.1 sign_median_us=719223.8 verify_median_us=734.2 verify_ok=20/20
+csv: SLH_DSA_PURE_SHA2_128S,20,503,32,64,7856,94054.1,719223.8,734.2,20
+bench: alg=SLH_DSA_PURE_SHA2_128F n=20 artifact_bytes=503 pk_len=32 sk_len=64 sig_len=17088 keygen_median_us=1463.2 sign_median_us=34598.2 verify_median_us=2167.4 verify_ok=20/20
+csv: SLH_DSA_PURE_SHA2_128F,20,503,32,64,17088,1463.2,34598.2,2167.4,20
+bench: alg=SLH_DSA_PURE_SHA2_192S n=20 artifact_bytes=503 pk_len=48 sk_len=96 sig_len=16224 keygen_median_us=137737.6 sign_median_us=1273642.3 verify_median_us=1040.3 verify_ok=20/20
+csv: SLH_DSA_PURE_SHA2_192S,20,503,48,96,16224,137737.6,1273642.3,1040.3,20
+bench: alg=SLH_DSA_PURE_SHA2_256S n=20 artifact_bytes=503 pk_len=64 sk_len=128 sig_len=29792 keygen_median_us=89829.0 sign_median_us=1132781.5 verify_median_us=1533.2 verify_ok=20/20
+csv: SLH_DSA_PURE_SHA2_256S,20,503,64,128,29792,89829.0,1132781.5,1533.2,20
+--- artifact-size scaling (sign only) ---
+scalesign: alg=ML-DSA-65 artifact_bytes=503 n=20 sign_median_us=114.4 sig_len=3309
+scalesign: alg=ML-DSA-65 artifact_bytes=1048576 n=5 sign_median_us=5291.9 sig_len=3309
+scalesign: alg=ML-DSA-65 artifact_bytes=10485760 n=5 sign_median_us=51910.3 sig_len=3309
+scalesign: alg=SLH_DSA_PURE_SHA2_128S artifact_bytes=503 n=20 sign_median_us=717739.8 sig_len=7856
+scalesign: alg=SLH_DSA_PURE_SHA2_128S artifact_bytes=1048576 n=5 sign_median_us=725610.6 sig_len=7856
+scalesign: alg=SLH_DSA_PURE_SHA2_128S artifact_bytes=10485760 n=5 sign_median_us=821321.8 sig_len=7856
+benchmarks: utc_end=2026-11-11T02:40:23Z
+RESULT: PASS benchmarks tag=run1
+wrote /tmp/ml-dsa-slh-repro/out/benchmarks-run1.log /tmp/ml-dsa-slh-repro/out/benchmarks-run1.csv /tmp/ml-dsa-slh-repro/out/scale-run1.csv
+benchmarks: tag=run2 artifact=/tmp/ml-dsa-slh-repro/pack/fixtures/release-1.4.2.tar.gz sha256=ac4c6d211d5b59513a3f83114f01ec35ade674e5f596e7a612a5516845c3eb2d
+benchmarks: utc_start=2026-11-11T02:40:23Z
+benchmarks: csv header: alg,n,artifact_bytes,pk_len,sk_len,sig_len,keygen_median_us,sign_median_us,verify_median_us,verify_ok
+bench: alg=ML-DSA-44 n=100 artifact_bytes=503 pk_len=1312 sk_len=2560 sig_len=2420 keygen_median_us=33.0 sign_median_us=77.9 verify_median_us=37.8 verify_ok=100/100
+csv: ML-DSA-44,100,503,1312,2560,2420,33.0,77.9,37.8,100
+bench: alg=ML-DSA-65 n=100 artifact_bytes=503 pk_len=1952 sk_len=4032 sig_len=3309 keygen_median_us=57.3 sign_median_us=131.6 verify_median_us=60.2 verify_ok=100/100
+csv: ML-DSA-65,100,503,1952,4032,3309,57.3,131.6,60.2,100
+bench: alg=ML-DSA-87 n=100 artifact_bytes=503 pk_len=2592 sk_len=4896 sig_len=4627 keygen_median_us=82.3 sign_median_us=147.1 verify_median_us=85.7 verify_ok=100/100
+csv: ML-DSA-87,100,503,2592,4896,4627,82.3,147.1,85.7,100
+bench: alg=SLH_DSA_PURE_SHA2_128S n=20 artifact_bytes=503 pk_len=32 sk_len=64 sig_len=7856 keygen_median_us=94887.4 sign_median_us=721057.9 verify_median_us=728.3 verify_ok=20/20
+csv: SLH_DSA_PURE_SHA2_128S,20,503,32,64,7856,94887.4,721057.9,728.3,20
+bench: alg=SLH_DSA_PURE_SHA2_128F n=20 artifact_bytes=503 pk_len=32 sk_len=64 sig_len=17088 keygen_median_us=1460.1 sign_median_us=34107.2 verify_median_us=2046.6 verify_ok=20/20
+csv: SLH_DSA_PURE_SHA2_128F,20,503,32,64,17088,1460.1,34107.2,2046.6,20
+bench: alg=SLH_DSA_PURE_SHA2_192S n=20 artifact_bytes=503 pk_len=48 sk_len=96 sig_len=16224 keygen_median_us=135137.2 sign_median_us=1259412.4 verify_median_us=1035.0 verify_ok=20/20
+csv: SLH_DSA_PURE_SHA2_192S,20,503,48,96,16224,135137.2,1259412.4,1035.0,20
+bench: alg=SLH_DSA_PURE_SHA2_256S n=20 artifact_bytes=503 pk_len=64 sk_len=128 sig_len=29792 keygen_median_us=90533.6 sign_median_us=1126440.2 verify_median_us=1467.4 verify_ok=20/20
+csv: SLH_DSA_PURE_SHA2_256S,20,503,64,128,29792,90533.6,1126440.2,1467.4,20
+--- artifact-size scaling (sign only) ---
+scalesign: alg=ML-DSA-65 artifact_bytes=503 n=20 sign_median_us=146.2 sig_len=3309
+scalesign: alg=ML-DSA-65 artifact_bytes=1048576 n=5 sign_median_us=5563.3 sig_len=3309
+scalesign: alg=ML-DSA-65 artifact_bytes=10485760 n=5 sign_median_us=53141.5 sig_len=3309
+scalesign: alg=SLH_DSA_PURE_SHA2_128S artifact_bytes=503 n=20 sign_median_us=714631.7 sig_len=7856
+scalesign: alg=SLH_DSA_PURE_SHA2_128S artifact_bytes=1048576 n=5 sign_median_us=728600.7 sig_len=7856
+scalesign: alg=SLH_DSA_PURE_SHA2_128S artifact_bytes=10485760 n=5 sign_median_us=826186.7 sig_len=7856
+benchmarks: utc_end=2026-11-11T02:41:55Z
+RESULT: PASS benchmarks tag=run2
+wrote /tmp/ml-dsa-slh-repro/out/benchmarks-run2.log /tmp/ml-dsa-slh-repro/out/benchmarks-run2.csv /tmp/ml-dsa-slh-repro/out/scale-run2.csv
+demo: running transparency-log demo (ML-DSA-65, 5 entries)
+tlog: append seq=0 version=1.4.0 key_id=release-2026-11-ml-dsa-65-v1 sig_len=3309 leaf=6b75d3ab3485905b...
+tlog: append seq=1 version=1.4.1 key_id=release-2026-11-ml-dsa-65-v2 sig_len=3309 leaf=ba64fc51dc6e7a20...
+tlog: append seq=2 version=1.4.2 key_id=release-2026-11-ml-dsa-65-v3 sig_len=3309 leaf=e7a42242b951f702...
+tlog: append seq=3 version=1.4.3 key_id=release-2026-11-ml-dsa-65-v4 sig_len=3309 leaf=3cd9a012b19248e4...
+tlog: append seq=4 version=1.4.4 key_id=release-2026-11-ml-dsa-65-v5 sig_len=3309 leaf=b065109a167fcdc1...
+tlog: entries=5 merkle_root=9db49e3fa64c19190b80489f27c942aeb4cf83d7eed6ae2e98bb96af9ff05305
+tlog: root_prefix=9db49e3fa64c1919
+tlog: inclusion proof seq=2 steps=3 verified=True
+tlog: inclusion proof seq=3 (pre-tamper) verified=True
+tlog: tamper seq=3 artifact_sha256 replaced -> root_changed=True tampered_root_prefix=a5f825911cad3520
+tlog: stale proof for tampered entry against original root verified=False (expected False)
+tlog_summary: entries=5 proof_verified=1 tamper_detected=1 stale_proof_rejected=1
+RESULT: PASS tlog entries=5
+demo: running key-rotation demo (ML-DSA-65)
+rotation: utc_start=2026-11-11T02:41:56Z
+rotation: artifact=/tmp/ml-dsa-slh-repro/pack/fixtures/release-1.4.2.tar.gz
+--- generate key v1 (key_id=release-2026-11-mldsa65-v1) ---
+keygen: alg=ML-DSA-65 pk_len=1952 sk_len=4032 pk_prefix=9df4ddcf6f343010d82169e5d1aec485
+--- sign release 1.4.2 with v1 ---
+sign: alg=ML-DSA-65 artifact_bytes=503 sig_len=3309
+verify: alg=ML-DSA-65 artifact_bytes=503 sig_len=3309 result=OK
+rotation: v1 signature verifies with v1 key: OK
+--- rotate: generate key v2 (key_id=release-2026-11-mldsa65-v2) ---
+keygen: alg=ML-DSA-65 pk_len=1952 sk_len=4032 pk_prefix=438b541caf3223b7bec59216d3695110
+--- sign release 1.4.3 (same artifact bytes) with v2 ---
+sign: alg=ML-DSA-65 artifact_bytes=503 sig_len=3309
+verify: alg=ML-DSA-65 artifact_bytes=503 sig_len=3309 result=OK
+rotation: v2 signature verifies with v2 key: OK
+--- cross-checks: old signatures must NOT verify under the new key ---
+verify: alg=ML-DSA-65 artifact_bytes=503 sig_len=3309 result=FAIL
+rotation: v1 signature under v2 key rejected: OK
+--- v1 signature still verifies under the retired v1 key (old releases stay valid) ---
+verify: alg=ML-DSA-65 artifact_bytes=503 sig_len=3309 result=OK
+rotation: v1 signature verifies with retired v1 key: OK
+rotation: manifest written to outputs/rotation-manifest.json
+rotation: utc_end=2026-11-11T02:41:56Z
+RESULT: PASS rotation
+=== headline comparison (fresh clone vs shipped) ===
+--- sign tests ---
+fresh:   RESULT: PASS sigtest ML-DSA-44 checks=8
+shipped: RESULT: PASS sigtest ML-DSA-44 checks=8
+--- benchmarks run1 (sign_median_us / verify_median_us) ---
+ML-DSA-44: fresh sign=87.1us verify=38.0us | shipped sign=83.4us verify=37.4us | diff +4.4% / +1.6%
+ML-DSA-65: fresh sign=153.9us verify=63.1us | shipped sign=142.2us verify=60.3us | diff +8.2% / +4.6%
+ML-DSA-87: fresh sign=147.1us verify=85.2us | shipped sign=161.9us verify=85.2us | diff -9.1% / +0.0%
+SLH_DSA_PURE_SHA2_128F: fresh sign=34598.2us verify=2167.4us | shipped sign=34618.5us verify=2158.6us | diff -0.1% / +0.4%
+SLH_DSA_PURE_SHA2_128S: fresh sign=719223.8us verify=734.2us | shipped sign=720164.3us verify=709.1us | diff -0.1% / +3.5%
+SLH_DSA_PURE_SHA2_192S: fresh sign=1273642.3us verify=1040.3us | shipped sign=1269114.6us verify=987.6us | diff +0.4% / +5.3%
+SLH_DSA_PURE_SHA2_256S: fresh sign=1132781.5us verify=1533.2us | shipped sign=1127361.0us verify=1589.1us | diff +0.5% / -3.5%
+--- transparency-log demo ---
+fresh:   RESULT: PASS tlog entries=5
+shipped: RESULT: PASS tlog entries=5
+--- key-rotation demo ---
+fresh:   RESULT: PASS rotation
+shipped: RESULT: PASS rotation
+clean_reproduce.sh DONE (workdir kept at /tmp/ml-dsa-slh-repro)

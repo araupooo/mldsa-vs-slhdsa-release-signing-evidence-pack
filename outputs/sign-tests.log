@@ -1,0 +1,88 @@
+sign-tests: artifact=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-6fb0e4f8/pack/fixtures/release-1.4.2.tar.gz sha256=ac4c6d211d5b59513a3f83114f01ec35ade674e5f596e7a612a5516845c3eb2d
+sign-tests: utc_start=2026-11-11T02:44:47Z
+--- ML-DSA-44 ---
+sizes: alg=ML-DSA-44 pk_len=1312 sk_len=2560 sig_len=2420 nist_level=2
+test: alg=ML-DSA-44 check=keygen PASS
+test: alg=ML-DSA-44 check=sign PASS
+test: alg=ML-DSA-44 check=verify_roundtrip PASS
+test: alg=ML-DSA-44 check=tampered_artifact_rejected PASS
+test: alg=ML-DSA-44 check=tampered_signature_rejected PASS
+test: alg=ML-DSA-44 check=wrong_key_rejected PASS
+test: alg=ML-DSA-44 check=empty_message_roundtrip PASS
+test: alg=ML-DSA-44 check=sizes_match PASS
+test_summary: alg=ML-DSA-44 checks=8 pass=8 fail=0
+RESULT: PASS sigtest ML-DSA-44 checks=8
+--- ML-DSA-65 ---
+sizes: alg=ML-DSA-65 pk_len=1952 sk_len=4032 sig_len=3309 nist_level=3
+test: alg=ML-DSA-65 check=keygen PASS
+test: alg=ML-DSA-65 check=sign PASS
+test: alg=ML-DSA-65 check=verify_roundtrip PASS
+test: alg=ML-DSA-65 check=tampered_artifact_rejected PASS
+test: alg=ML-DSA-65 check=tampered_signature_rejected PASS
+test: alg=ML-DSA-65 check=wrong_key_rejected PASS
+test: alg=ML-DSA-65 check=empty_message_roundtrip PASS
+test: alg=ML-DSA-65 check=sizes_match PASS
+test_summary: alg=ML-DSA-65 checks=8 pass=8 fail=0
+RESULT: PASS sigtest ML-DSA-65 checks=8
+--- ML-DSA-87 ---
+sizes: alg=ML-DSA-87 pk_len=2592 sk_len=4896 sig_len=4627 nist_level=5
+test: alg=ML-DSA-87 check=keygen PASS
+test: alg=ML-DSA-87 check=sign PASS
+test: alg=ML-DSA-87 check=verify_roundtrip PASS
+test: alg=ML-DSA-87 check=tampered_artifact_rejected PASS
+test: alg=ML-DSA-87 check=tampered_signature_rejected PASS
+test: alg=ML-DSA-87 check=wrong_key_rejected PASS
+test: alg=ML-DSA-87 check=empty_message_roundtrip PASS
+test: alg=ML-DSA-87 check=sizes_match PASS
+test_summary: alg=ML-DSA-87 checks=8 pass=8 fail=0
+RESULT: PASS sigtest ML-DSA-87 checks=8
+--- SLH_DSA_PURE_SHA2_128S ---
+sizes: alg=SLH_DSA_PURE_SHA2_128S pk_len=32 sk_len=64 sig_len=7856 nist_level=1
+test: alg=SLH_DSA_PURE_SHA2_128S check=keygen PASS
+test: alg=SLH_DSA_PURE_SHA2_128S check=sign PASS
+test: alg=SLH_DSA_PURE_SHA2_128S check=verify_roundtrip PASS
+test: alg=SLH_DSA_PURE_SHA2_128S check=tampered_artifact_rejected PASS
+test: alg=SLH_DSA_PURE_SHA2_128S check=tampered_signature_rejected PASS
+test: alg=SLH_DSA_PURE_SHA2_128S check=wrong_key_rejected PASS
+test: alg=SLH_DSA_PURE_SHA2_128S check=empty_message_roundtrip PASS
+test: alg=SLH_DSA_PURE_SHA2_128S check=sizes_match PASS
+test_summary: alg=SLH_DSA_PURE_SHA2_128S checks=8 pass=8 fail=0
+RESULT: PASS sigtest SLH_DSA_PURE_SHA2_128S checks=8
+--- SLH_DSA_PURE_SHA2_128F ---
+sizes: alg=SLH_DSA_PURE_SHA2_128F pk_len=32 sk_len=64 sig_len=17088 nist_level=1
+test: alg=SLH_DSA_PURE_SHA2_128F check=keygen PASS
+test: alg=SLH_DSA_PURE_SHA2_128F check=sign PASS
+test: alg=SLH_DSA_PURE_SHA2_128F check=verify_roundtrip PASS
+test: alg=SLH_DSA_PURE_SHA2_128F check=tampered_artifact_rejected PASS
+test: alg=SLH_DSA_PURE_SHA2_128F check=tampered_signature_rejected PASS
+test: alg=SLH_DSA_PURE_SHA2_128F check=wrong_key_rejected PASS
+test: alg=SLH_DSA_PURE_SHA2_128F check=empty_message_roundtrip PASS
+test: alg=SLH_DSA_PURE_SHA2_128F check=sizes_match PASS
+test_summary: alg=SLH_DSA_PURE_SHA2_128F checks=8 pass=8 fail=0
+RESULT: PASS sigtest SLH_DSA_PURE_SHA2_128F checks=8
+--- SLH_DSA_PURE_SHA2_192S ---
+sizes: alg=SLH_DSA_PURE_SHA2_192S pk_len=48 sk_len=96 sig_len=16224 nist_level=3
+test: alg=SLH_DSA_PURE_SHA2_192S check=keygen PASS
+test: alg=SLH_DSA_PURE_SHA2_192S check=sign PASS
+test: alg=SLH_DSA_PURE_SHA2_192S check=verify_roundtrip PASS
+test: alg=SLH_DSA_PURE_SHA2_192S check=tampered_artifact_rejected PASS
+test: alg=SLH_DSA_PURE_SHA2_192S check=tampered_signature_rejected PASS
+test: alg=SLH_DSA_PURE_SHA2_192S check=wrong_key_rejected PASS
+test: alg=SLH_DSA_PURE_SHA2_192S check=empty_message_roundtrip PASS
+test: alg=SLH_DSA_PURE_SHA2_192S check=sizes_match PASS
+test_summary: alg=SLH_DSA_PURE_SHA2_192S checks=8 pass=8 fail=0
+RESULT: PASS sigtest SLH_DSA_PURE_SHA2_192S checks=8
+--- SLH_DSA_PURE_SHA2_256S ---
+sizes: alg=SLH_DSA_PURE_SHA2_256S pk_len=64 sk_len=128 sig_len=29792 nist_level=5
+test: alg=SLH_DSA_PURE_SHA2_256S check=keygen PASS
+test: alg=SLH_DSA_PURE_SHA2_256S check=sign PASS
+test: alg=SLH_DSA_PURE_SHA2_256S check=verify_roundtrip PASS
+test: alg=SLH_DSA_PURE_SHA2_256S check=tampered_artifact_rejected PASS
+test: alg=SLH_DSA_PURE_SHA2_256S check=tampered_signature_rejected PASS
+test: alg=SLH_DSA_PURE_SHA2_256S check=wrong_key_rejected PASS
+test: alg=SLH_DSA_PURE_SHA2_256S check=empty_message_roundtrip PASS
+test: alg=SLH_DSA_PURE_SHA2_256S check=sizes_match PASS
+test_summary: alg=SLH_DSA_PURE_SHA2_256S checks=8 pass=8 fail=0
+RESULT: PASS sigtest SLH_DSA_PURE_SHA2_256S checks=8
+sign-tests: utc_end=2026-11-11T02:44:54Z
+RESULT: PASS sign-tests all_algorithms

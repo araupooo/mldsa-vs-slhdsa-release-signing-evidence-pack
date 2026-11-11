@@ -1,0 +1,23 @@
+rotation: utc_start=2026-11-11T02:23:37Z
+rotation: artifact=/home/hatch/workspace/goals/postfiat-task-node-connection/hidden_files/task-6fb0e4f8/pack/fixtures/release-1.4.2.tar.gz
+--- generate key v1 (key_id=release-2026-11-mldsa65-v1) ---
+keygen: alg=ML-DSA-65 pk_len=1952 sk_len=4032 pk_prefix=956c34d82ef23f4eeb3aa582f9f8d448
+--- sign release 1.4.2 with v1 ---
+sign: alg=ML-DSA-65 artifact_bytes=503 sig_len=3309
+verify: alg=ML-DSA-65 artifact_bytes=503 sig_len=3309 result=OK
+rotation: v1 signature verifies with v1 key: OK
+--- rotate: generate key v2 (key_id=release-2026-11-mldsa65-v2) ---
+keygen: alg=ML-DSA-65 pk_len=1952 sk_len=4032 pk_prefix=47194dc93de5df0fb772b40f1184b7b8
+--- sign release 1.4.3 (same artifact bytes) with v2 ---
+sign: alg=ML-DSA-65 artifact_bytes=503 sig_len=3309
+verify: alg=ML-DSA-65 artifact_bytes=503 sig_len=3309 result=OK
+rotation: v2 signature verifies with v2 key: OK
+--- cross-checks: old signatures must NOT verify under the new key ---
+verify: alg=ML-DSA-65 artifact_bytes=503 sig_len=3309 result=FAIL
+rotation: v1 signature under v2 key rejected: OK
+--- v1 signature still verifies under the retired v1 key (old releases stay valid) ---
+verify: alg=ML-DSA-65 artifact_bytes=503 sig_len=3309 result=OK
+rotation: v1 signature verifies with retired v1 key: OK
+rotation: manifest written to outputs/rotation-manifest.json
+rotation: utc_end=2026-11-11T02:23:37Z
+RESULT: PASS rotation
